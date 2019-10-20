@@ -6,7 +6,11 @@ sec_arg = int(argv[2])
 solution = randint(first_arg, sec_arg)
 
 while True:
-    guess = int(input(f'Guess the number between {first_arg} and {sec_arg}\n'))
-    if guess == solution:
-        print("You are right!")
-        break
+    try:
+        guess = int(
+            input(f'Guess the number between {first_arg} and {sec_arg}\n'))
+        if guess == solution:
+            print("You are right!")
+            break
+    except:
+        print('Please enter a number')
